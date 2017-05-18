@@ -18,6 +18,8 @@ gem "jekyll", "3.4.3"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem "jekyll-seo-tag", "~> 2.2.3"
+   gem 'jekyll-livereload'
 end
 
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
