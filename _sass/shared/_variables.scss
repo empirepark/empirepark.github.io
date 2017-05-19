@@ -4,7 +4,7 @@
 
 // Start with assigning color names to specific hex values.
 $white:  #fff;
-$black:  #000;
+$black:  #000;;
 $red:    #d9534f;
 $orange: #f0ad4e;
 $yellow: #ffd500;
@@ -43,12 +43,12 @@ $border-width: 1px;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-sans-serif: 'Raleway', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $font-family-serif:      Georgia, "Times New Roman", Times, serif;
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-$font-family-base:       'Raleway', sans-serif;
-$font-family-headers:    'Lato', sans-serif;
+$font-family-base:       'Lato', sans-serif;
+$font-family-headers:    'Raleway', sans-serif;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 16px;
@@ -59,7 +59,7 @@ $font-size-lg:   1.25rem;
 $font-size-sm:   .875rem;
 $font-size-xs:   .75rem;
 
-$font-weight-normal: 300;
+$font-weight-normal: 400;
 $font-weight-bold: 700;
 
 $font-weight-base: $font-weight-normal;
@@ -84,8 +84,9 @@ $display4-weight: 300;
 
 $headings-margin-bottom: ($spacer / 2);
 $headings-font-family:   $font-family-headers;
-$headings-font-weight:   900;
-$headings-line-height:   1.1;
+$headings-font-weight:   500;
+$headings-font-weight-heavy: 900;
+$headings-line-height:   1;
 $headings-color:         $gray-dark;
 
 $small-font-size: 80%;
@@ -133,7 +134,3 @@ $breadcrumb-bg:                 $body-bg;
 $breadcrumb-divider-color:      $body-color-alt;
 $breadcrumb-active-color:       $body-color;
 $breadcrumb-divider:            '>';
-
-// IMPORTANT
-// BOOTSTRAP VARIABLES MUST BE IMPORTED
-@import '../bootstrap/variables';

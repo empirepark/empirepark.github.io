@@ -17,19 +17,21 @@
 //
 
 @import 'shared/variables';
+
+@import 'bootstrap/variables'; // Import bootstrap variables so they're available
 @import 'shared/mixins';
 
-// Globals
+// // Globals
 @import 'main/globals/module';
-
-// Elements
+//
+// // Elements
 @import 'main/elements/module';
-
-// Modules
+//
+// // Modules
 @import 'main/modules/module';
-
-// Views
+//
+// // Views
 @import 'main/views/module';
-
-
+//
+//
 @import 'main/layouts/module';
