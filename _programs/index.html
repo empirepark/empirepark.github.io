@@ -1,0 +1,56 @@
+---
+layout: default
+permalink: programs/index.html
+title: Programs
+---
+
+  <div class="container-fluid">
+    <div class="programs segment">
+      <div class="title">
+        <h2>Our Programs</h2>
+        <div class="short-text">
+          <div class="sep l"></div>
+          Empirepark offers a variety of community based programs year round
+          <span class="sep r"></span>
+        </div>
+      </div>
+
+      {% unless site.programs.size > 1 %}
+        <h3>Ooops!</h3>
+        <p>
+          Currently no programs are offered at empire park. Check back later!
+        </p>
+      {% endunless %}
+
+
+      {% for program in site.programs %}
+
+        {% if program.title == 'Programs' %}
+          {% continue %}
+        {% endif %}
+
+        {% if program.published == false %}
+          {% continue %}
+        {% endif %}
+
+        {% assign screen_width = "program-fullscreen" %}
+
+        {% if forloop.last %}
+          {% assign mod = forloop.index | modulo: 2 %}
+          {% if mod == 0 %}
+            {% assign screen_width = "" %}
+          {% endif %}
+        {% endif %}
+
+        <section class="program {{ screen_width }}" style="background: {{program.cover_img_color}};">
+          <a href="{{ program.url | prepend: site.baseurl }}">
+            <img class="background" src="/assets/img/programs/{{ program.cover_img }}" alt="">
+            <div class="summary">
+              <h3>{{ program.title }}</h3>
+              <p>{{ program.teaser }}</p>
+            </div>
+          </a>
+        </section>
+      {% endfor %}
+    </div>
+  </div>

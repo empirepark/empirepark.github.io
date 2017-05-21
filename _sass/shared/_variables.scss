@@ -30,7 +30,7 @@ $brand-success: #00aa8f;
 $brand-warning: #f0ad4e;
 $brand-danger: #d9684c;
 
-$spacer:   1rem;
+$spacer:   1.5rem;
 $border-width: 1px;
 
 // // Fonts
@@ -82,6 +82,7 @@ $display2-weight: 300;
 $display3-weight: 300;
 $display4-weight: 300;
 
+$headings-margin-top: $spacer;
 $headings-margin-bottom: ($spacer / 2);
 $headings-font-family:   $font-family-headers;
 $headings-font-weight:   500;

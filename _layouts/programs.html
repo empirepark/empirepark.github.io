@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="container">
+  <article class="program-article">
+    <section class="program-body">
+      {{ content }}
+    </section>
+
+    <section class="program-details">
+      <img class="img-thumbnail img-fluid" src="/assets/img/programs/{{page.cover_img}}" alt="">
+      <dl class="progams-details-list">
+        <dt>Cost:</dt>
+        <dd>{{ page.cost }}</dd>
+        <dt>Targeted Audience:</dt>
+        <dd>{{ page.audience }}</dd>
+      </dl>
+    </section>
+  </article>
+</div>

@@ -1,17 +1,36 @@
-<nav class="navbar navbar-toggleable-md ">
+<nav class="navbar navbar-toggleable-md">
   <div class="container">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    
+
     <a href="/" class="navbar-brand">
       <img src="/assets/logo.png" alt="Empire Park Community League">
     </a>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="/programs">Programs</a>
-        <a class="nav-item nav-link" href="/volunteers">Volunteers</a>
-        <a class="nav-item nav-link" href="/membership">Membership</a>
+        {% for link in site.data.navigation %}
+          {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+          {% elsif link.url == '#' %}
+            {% assign domain = '' %}
+          {% else %}
+            {% assign domain = site.url %}
+          {% endif %}
+
+          {% assign active_class = '' %}
+          {% if link.url == page.url %}
+            {% assign active_class = 'active' %}
+          {% elsif page.homepage == true and link.url == '/' %}
+            {% assign active_class = 'active' %}
+          {% endif %}
+
+          <a class="nav-item nav-link {{active_class}}" href="{{ domain }}{{ site.baseurl }}{{ link.url }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>
+            {{ link.title | escape }}
+          </a>
+        {% endfor %}
       </div>
     </div>
   </div>
