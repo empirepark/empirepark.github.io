@@ -2,20 +2,48 @@
 layout: default
 ---
 
-<div class="container">
-  <article class="program-article">
-    <section class="program-body">
-      {{ content }}
-    </section>
 
-    <section class="program-details">
-      <img class="img-thumbnail img-fluid" src="/assets/img/programs/{{page.cover_img}}" alt="">
-      <dl class="progams-details-list">
-        <dt>Cost:</dt>
-        <dd>{{ page.cost }}</dd>
-        <dt>Targeted Audience:</dt>
-        <dd>{{ page.audience }}</dd>
-      </dl>
-    </section>
-  </article>
+
+<div class="programs-masthead" style="background-image: url(/assets/img/programs/{{page.cover_img}});">
+  <div class="container program-title">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="display-3  text-center">{{ page.title }}</h1>
+      </div>
+
+    </div>
+
+  </div>
 </div>
+  {{!-- <div style="background-color: #84c2ff; width: 100%; padding: 1rem;">
+      <div class="container">
+        HOME >> PROGROGRAMS >> YOGA
+      </div>
+  </div> --}}
+
+  <div class="container">
+    <article class="program-article" style="background-color: #fff;">
+
+      <section class="program-body">
+        {{ content }}
+      </section>
+
+      <section class="program-details">
+        <div class="progams-details-list">
+          {% if page.cost %}
+          <strong>Cost:</strong>
+          {{ page.cost }}
+          {% endif %}
+
+          {% if page.audience %}
+          <strong>Audience:</strong>
+          {{ page.audience }}
+          {% endif %}
+
+          {% if page.details %}
+          {{page.details }}
+          {% endif %}
+        </div>
+      </section>
+    </article>
+  </div>

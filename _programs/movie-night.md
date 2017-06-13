@@ -1,11 +1,11 @@
 ---
-title: "Movie Night"
-published: false
+title: "Outdoor Movie Night"
+published: true
 type: "Event"
-cost: "Free"
-audience: "Ages: 6-12 years (children under 6 must be supervised by a parent or guardian)"
 cover_img: "movie-night.jpg"
-cover_img_color: "#613d7c"
+cover_img_color: "#d9534f"
+hero_img: "movie-night-hero.jpg"
+hero_img_color: "#613d7c"
 details: >
   <strong>When:</strong> Monday - Friday 8:00am - 12:00pm
   <strong>Where:</strong> Empire Park Community League (in the park)
@@ -16,16 +16,30 @@ teaser: >
   vel ullamcorper neque nunc
 ---
 
-Mauris wisi etiam ut vitae ultrices elit. Id vitae vulputate enim magna, mauris dignissim eget, donec massa sed. Mauris
-magna accumsan, nibh viverra ultricies. Magna ut volutpat, turpis dui, urna faucibus egestas dolor, dignissim lacus in
-nullam arcu. Mattis fringilla amet. Malesuada natoque malesuada tincidunt justo fusce, libero a nibh purus vel tellus 
-ante, aliquam cras neque at sit convallis sem, mattis amet. Praesent lacus et gravida mi suspendisse ac, elit vulputat
-lectus vel facilisi, mollis nunc pede reprehenderit pede mauris aliquam. Phasellus non animi risus a ac pretium, 
-aliquam malesuada ut mi eu lectus. Ac molestie, et ridiculus at.
+During the summer months, Empire Park Community League hosts a set of movie nights.
+##### Inclement Weather
 
-Suscipit suspendisse, quisque aliquam mi ante varius in erat, turpis sed, proin etiam imperdiet morbi nulla ligula vel,
-aliquam mauris nunc montes sociosqu nec. Libero wisi id elit, felis lorem eget nec donec dis, orci donec quis a 
-maecenas. Ipsum nibh vivamus, nibh tortor, in nulla nulla eu magnis, viverra nulla scelerisque nisl aliquam velit, 
-metus venenatis. Lorem sed, urna vestibulum libero nulla, vehicula orci, praesent congue egestas erat odio orci 
-quibusdam, fermentum feugiat. Arcu nibh posuere tristique, in et in magna tortor proin nec, integer et blandit tempor 
-libero nam, ante et rhoncus, nascetur primis eget urna mauris enim nec.
+  In case of rain blah
+  
+  
+## Showing 2017
+  <div class="movie-list">
+  
+    <a href="http://www.imdb.com/title/tt0177789/" class="movie">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjA0NjM1ODkyMl5BMl5BanBnXkFtZTcwODY0NDMzMg@@._V1_.jpg">
+      <h3> Galaxy Quest</h3>
+      <p class="lead">Screening: July 15, 2017</p>
+    </a>
+    
+    <a href="http://www.imdb.com/title/tt0317705/" class="movie">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BMTY5OTU0OTc2NV5BMl5BanBnXkFtZTcwMzU4MDcyMQ@@._V1_SY1000_CR0,0,675,1000_AL_.jpg">
+      <h3>The Incredibles</h3>
+      <p class="lead">Screening: August 19, 2017</p>
+    </a>
+    
+    <a href="http://www.imdb.com/title/tt0245429/" class="movie">
+      <img src="https://images-na.ssl-images-amazon.com/images/M/MV5BOGJjNzZmMmUtMjljNC00ZjU5LWJiODQtZmEzZTU0MjBlNzgxL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SY1000_CR0,0,675,1000_AL_.jpg">
+      <h3>Spirited Away</h3>
+      <p class="lead">Screening: September 23rd, 2017</p>
+    </a>
+  </div>

@@ -32,7 +32,7 @@ through February, weather permitting. The rink is open to free skating and hocke
 ## Equipment Rentals
 For our members & day users Empire Park keeps a small stock of skates, hockey sticks and helmets. Equipment
 loans for the skating season are available to members in good standing. If you wish to rent skates for season
-please contact our rink coordinator at [rink@empirepark.ca](mailto:rink@empirepark.ca)
+please contact our rink coordinator at [rink@empirepark.ca](mailto:rink@empirepark.ca) or in person during operating hours.
 
 ## Learn To Skate
 In partnership with the City of Edmonton, Empire Park Community League hosts a drop in learn to skate program where
