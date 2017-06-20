@@ -1,7 +1,9 @@
 ---
-title: "Outdoor Movie Night"
+object-id: movie-night
+type: event
 published: true
-type: "Event"
+
+title: "Outdoor Movie Night"
 cover_img: "movie-night.jpg"
 cover_img_color: "#d9534f"
 hero_img: "movie-night-hero.jpg"

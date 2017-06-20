@@ -1,7 +1,9 @@
 ---
-title: "Ice Skating & Hockey"
+object-id: rink
+type: program
 published: true
-type: "Program"
+
+title: "Ice Skating & Hockey"
 cost: >
   Edmonton Community League Members (including Empire Park) sake free with skate tags.
   Non Members: $2/day

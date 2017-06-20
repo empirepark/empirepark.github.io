@@ -28,6 +28,11 @@
   }
 
   .short-lead {
+
+    .lead {
+      display: inline-block;
+    }
+
     .sep {
       display: inline-block;
       position: relative;

@@ -1,4 +1,12 @@
-.mask {
+.parallax {
+  position: relative;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.parallax-mask {
   position: absolute;
   display: block;
   top: 0;
@@ -8,6 +16,11 @@
   width: 100%;
   height: 100%;
   background: fade-out($secondary-color, 0.5);
+}
+
+.parallax-container {
+  position: relative;
+  z-index: 10; // TODO: Adjust to z-index to z-index variables
 }
 
 @mixin parallax-background($url) {

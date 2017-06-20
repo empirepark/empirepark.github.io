@@ -13,46 +13,40 @@
   }
 
 
-  .event-wrapper {
-    position: relative;
-    padding: 105px 0;
-    background: url("/assets/img/parallax/img-3.jpg") center center no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+  .event {
     text-align: center;
-    .container {
-      position: relative;
-      z-index: 10;
-    }
+
     h2,
-    h4,
     p {
       color: $white;
     }
     h2 {
       text-transform: uppercase;
+      font-weight: $headings-font-weight-heavy;
     }
-    h4 {
-      display: inline-block;
-      padding: 10px 5px 25px;
-      i {
-        font-size: 14px;
-        margin-right: 5px;
-      }
-    }
-    p {
-      width: 55%;
-      margin: 0 auto 35px;
-    }
-    @media screen and (max-width:1200px) {
-      p {
-        width: 75%;
-      }
-    }
-    @media screen and (max-width:991px) {
-      p {
-        width: 90%;
-      }
+    // p {
+    //   width: 55%;
+    //   margin: 0 auto 35px;
+    // }
+    // @media screen and (max-width:1200px) {
+    //   p {
+    //     width: 75%;
+    //   }
+    // }
+    // @media screen and (max-width:991px) {
+    //   p {
+    //     width: 90%;
+    //   }
+    // }
+  }
+
+  .event-time {
+    display: inline-block;
+    padding: 10px 5px 25px;
+    font-weight: $font-weight-bold;
+    i {
+      font-size: 14px;
+      margin-right: 5px;
     }
   }
 

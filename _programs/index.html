@@ -5,30 +5,53 @@ title: Programs
 ---
 <div class="segment events">
   <div class="container">
-    <div class="segment-title">
-      <h2>Upcoming Events</h2>
-    </div>
+
 
     <div class="row">
-      {% assign events = site.programs | where: "type","Event" | where: "published", true %}
-      {% unless events.size > 0 %}
-        <h3>Ooops!</h3>
-        <p>
-          Currently no upcoming events. Check back later!
-        </p>
-      {% endunless %}
 
-      {% for event in events %}
-        <section class="program program-contained" style="background: {{event.cover_img_color}};">
-          <a href="{{ event.url | prepend: site.baseurl }}">
-            <img class="background" src="/assets/img/programs/{{ event.cover_img}}" alt="">
-            <div class="summary">
-              <h3>{{ event.title }}</h3>
-              <p>{{ event.teaser }}</p>
-            </div>
-          </a>
-        </section>
-      {% endfor %}
+      <div class="col-md-5">
+        {% assign events_data = (site.data.events | where: "featured", false | sort: 'date')%}
+
+        <div class="segment-title">
+          <h2>Upcoming Events</h2>
+        </div>
+
+        {% for event_data in events_data %}
+          {% assign event = site.programs | where: "type","event" | where: "object-id", event_data.event-id | first %}
+
+          {{ event_data.date | date: "<span class='month'>%B</span> <span class='day'>%e</span>" }}
+          <h3>{{ event_data.title | default: event.title }}</h3>
+
+        {% endfor %}
+      </div>
+
+
+
+      <div class="offset-md-1 col-md-6">
+        {% assign featured_event_data = (site.data.events | where: "featured", true | first )%}
+        {% assign featured_event = site.programs | where: "type","event" | where: "object-id", featured_event_data.event-id | first %}
+        <div class="segment-title">
+          <h2>Featured Event</h2>
+        </div>
+
+        {% if featured_event %}
+          <section class="program program-contained" style="background: {{featured_event.cover_img_color}};">
+            <a href="{{ featured_event.url | prepend: site.baseurl }}">
+              <img class="background" src="/assets/img/programs/{{ featured_event.cover_img}}" alt="">
+              <div class="summary">
+                <h3>{{ featured_event_data.title | default: featured_event.title }}</h3>
+                <p>{{ featured_event_data.teaser | default: featured_event.teaser }}</p>
+              </div>
+            </a>
+        {% else %}
+          <h3>Ooops!</h3>
+          <p>
+            Currently no upcoming events. Check back later!
+          </p>
+          </section>
+        {% endif %}
+      </div>
+
     </div>
 
   </div>
@@ -49,7 +72,7 @@ title: Programs
 
 
     <div class="row no-gutters">
-      {% assign programs = site.programs | where: "type","Program" | where: "published", true %}
+      {% assign programs = site.programs | where: "type", "program" | where: "published", true %}
 
       {% unless programs.size > 0 %}
         <h3>Ooops!</h3>

@@ -1,7 +1,9 @@
 ---
-title: "Yoga"
+object-id: yoga
+type: program
 published: true
-type: "Program"
+
+title: "Yoga"
 cost: "Free"
 audience: "Ages: 6-12 years (children under 6 must be supervised by a parent or guardian)"
 cover_img: "yoga.jpg"

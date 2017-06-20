@@ -1,0 +1,22 @@
+- event-id: movie-night
+  date: 2017-07-15T10:15pm
+  featured: true
+  title: "Movie Night: Galaxy Quest"
+  teaser: Come join use in the park for a late night movie under the stars
+
+- event-id: movie-night
+  date: 2017-08-25T9:00PM
+  featured: false
+  title: "Movie Night: The Incredibles"
+  teaser: Come join use in the park for a late night movie under the stars
+
+- event-id: movie-night
+  date: 2017-09-23T9:00pm
+  featured: false
+  title: "Movie Night: Spirited Away"
+  teaser: Come join use in the park for a late night movie under the stars
+
+- event-id: community-league-day
+  date: 2017-09-16T12:30
+  featured: false
+  title: Community League Day

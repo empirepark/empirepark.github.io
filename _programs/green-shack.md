@@ -1,7 +1,9 @@
 ---
-title: "Green Shack"
+object-id: green-shack
+type: program
 published: true
-type: "Program"
+
+title: "Green Shack"
 cost: "Free"
 audience: "Ages: 6-12 years (children under 6 must be supervised by a parent or guardian)"
 cover_img: "green-shack.jpg"

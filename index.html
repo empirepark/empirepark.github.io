@@ -8,11 +8,11 @@ layout: default
 
 <section class="segment features">
   <div class="container">
-    <div class="title">
+    <div class="segment-title">
       <h2>Benefits of Membership</h2>
-      <div class="short-text">
+      <div class="short-lead">
         <div class="sep l"></div>
-        <h5>Reasons to Join Us</h5>
+        <h5 class="lead">Reasons to Join Us</h5>
         <div class="sep r"></div>
       </div>
     </div>
@@ -94,37 +94,42 @@ layout: default
 <div class="countdown-wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-lg-5 clearfix">
-        <h3 class="text">Our Next Event Will Be In</h3>
-      </div>
-      <div class="col-lg-7">
-        <div class="countdown clearfix">
-        </div>
+      <div class="segment-title">
+        <h2 class="">Upcoming Event</h2>
       </div>
     </div>
   </div>
 </div>
 
 
-<div class="event-wrapper">
-  <div class="mask"></div>
-  <div class="container">
-    <h2>Community League Day</h2>
-    <h4>
-      <i class="fa fa-clock-o"></i>Saturday September 17, 2016 @ 1:30pm</h4>
-    <h4>
-      <i class="fa fa-map-marker"></i>
-      Empire Park Community Hall
-    </h4>
-    <p>
-      Once again we're hosting a party for Community League Day to celebrate leagues and their tireless support of
-      their neighbourhoods. We'll have non stop Pokemon lures setup at our three Pokestops along with food, games and
-      live music.
-    </p>
-    <a href="#" class="btn btn-big btn-solid">
-      <i class="fa fa-compass"></i>
-      <span>Learn More</span>
-    </a>
+{% assign featured_event_data = (site.data.events | where: "featured", true | first )%}
+{% assign featured_event = site.programs | where: "type","event" | where: "object-id", featured_event_data.event-id | first %}
+<div class="segment segment-nopadding event">
+  <div class="parallax" style="background-image: url('/assets/img/programs/{{ featured_event.cover_img}}');">
+    <div class="parallax-mask"></div>
+    <div class="parallax-container">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>{{ featured_event_data.title | default: featured_event.title }}</h2>
+            <p class="event-time">
+              <i class="fa fa-clock-o"></i>{{ featured_event_data.date | date: "%A %B %d, %Y @ %I:%M%p" }}
+            </p>
+            <p class="event-time">
+              <i class="fa fa-map-marker"></i>
+              {{ featured_event_data.location | default: "Empire Park Community Hall" }}
+            </p>
+            <p>
+              {{ featured_event_data.teaser | default: featured_event.teaser }}
+            </p>
+            <a href="{{ featured_event.url }}" class="btn btn-big btn-solid mt-3">
+              <i class="fa fa-compass"></i>
+              <span>Learn More</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -137,21 +142,18 @@ layout: default
           <h2>We Need <strong>Volunteers</strong></h2>
           <p>
             Empire Park is a registered non-profit that functions because of the good will and generosity of volunteers.
-            We're always on the lookout for great talent so if you or anyone you know might be interested contact us at <strong>volunteers@empirepark.ca</strong>
+            We're always on the lookout for great talent so if you or anyone you know might be interested in volunteering, contact us at <strong><a href="mailto:volunteers@empirepark.ca">volunteers@empirepark.ca</a></strong>
           </p>
-
-          <p>
-            Remember to check back in a few weeks when we launch our volunteers posting page!
-          </p>
-          <a href="#" class="btn btn-big">
-            <i class="fa fa-heartbeat"></i>Become a Volunteer
-          </a>
+          {% comment %}
+            <a href="#" class="btn btn-big">
+              <i class="fa fa-heartbeat"></i>Become a Volunteer
+            </a>
+          {% endcomment %}
 
 
       </div>
       <div class="offset-md-1 col-md-5 col-sm-6 images-outer ">
-        <img class="img-fluid" src="/assets/img/hall.jpg" class="thumbnail">
-
+        <img class="img-fluid" src="/assets/img/hall.jpg" class="">
       </div>
     </div>
   </div>
